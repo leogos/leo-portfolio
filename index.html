@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leo Olsen | Web Developer</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <nav class="navbar">
+          <a href="/" class="nav-item">
+            <span class="nav-icon">L</span>
+            <span class="nav-label">That Developer</span>
+          </a>
+
+          <button class="nav-item" data-menu-open>
+            <span class="nav-icon">
+              <!-- buraya burger svg gelecek -->
+              ≡
+            </span>
+            <span class="nav-label">Menu</span>
+          </button>
+
+          <button class="nav-item" data-contact-open>
+            <span class="nav-icon">O</span>
+            <span class="nav-label">Contact</span>
+          </button>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <div class="container">
+        <section class="hero">
+          <img
+            src="./src/img/pp.avif"
+            alt="Leo Olsen's profile picture"
+            srcset="./src/img/pp.avif 1x, ./src/img/pp@2x.avif 2x type='image/avif'"
+          />
+          <h1 class="hero-title">
+            Frontend designs by <span class="leo">Leo Olsen</span>.
+          </h1>
+          <p class="hero-description">Clean. Fast. Intentional.</p>
+          <p><span class="hero-dot">.</span> Available on new projects</p>
+          <button class="hero-btn">See what I’ve built</button>
+        </section>
+      </div>
+
+      <div class="container">
+        <section class="about-me" id="#about"></section>
+      </div>
+    </main>
+  </body>
+</html>
