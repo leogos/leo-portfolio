@@ -31,7 +31,7 @@
         </nav>
       </header>
     </div>
-    <main>
+    <main class="main">
       <div class="container">
         <section class="hero">
           <img
@@ -40,17 +40,58 @@
             srcset="./src/img/pp.avif 1x, ./src/img/pp@2x.avif 2x type='image/avif'"
           />
           <h1 class="hero-title">
-            Frontend designs by <span class="leo">Leo Olsen</span>.
+            <span id="changing-word" class="changing-word"></span>
+          </br>by <span class="leo">Leo Olsen</span>.
           </h1>
-          <p class="hero-description">Clean. Fast. Intentional.</p>
-          <p><span class="hero-dot">.</span> Available on new projects</p>
-          <button class="hero-btn">See what I’ve built</button>
+
+          <button class="hero-btn">See what I've built</button>
+          <p><span class="hero-dot">.</span> Available for new projects</p>
         </section>
       </div>
 
       <div class="container">
-        <section class="about-me" id="#about"></section>
+        <section class="about-me" id="about">
+           <h2>About Me</h2>
+           
+        </section>
       </div>
+
+
+      <div class="container">
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Leo Olsen</span>
+        <span class="footer-tagline"><span class="hero-dot">.</span> Available for new projects</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Leo Olsen</span>
+      <div class="footer-socials">
+        <a href="https://github.com/..." class="footer-social-btn" aria-label="GitHub">
+          <span class="footer-s-icon"><!-- GitHub SVG --></span>
+          <span class="footer-s-label">GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/..." class="footer-social-btn" aria-label="LinkedIn">
+          <span class="footer-s-icon"><!-- LinkedIn SVG --></span>
+          <span class="footer-s-label">LinkedIn</span>
+        </a>
+        <a href="mailto:leo@example.com" class="footer-social-btn" aria-label="Email">
+          <span class="footer-s-icon"><!-- Mail SVG --></span>
+          <span class="footer-s-label">Email</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
     </main>
+
+    <script src="./src/js/main.js"></script>
   </body>
 </html>

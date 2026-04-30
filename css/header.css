@@ -1,7 +1,18 @@
+.main {
+  padding-top: 80px;
+}
+
 .site-header {
   display: flex;
   justify-content: center;
-  padding: 12px 0;
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar {
@@ -10,8 +21,9 @@
   gap: 24px;
   padding: 8px 16px;
   border-radius: 12px;
-  border: 1px solid #121212;
+  border: 1px solid lightgray;
   background: #fff;
+  width: 100%;
 }
 
 .nav-item {
