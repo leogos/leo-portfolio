@@ -8,8 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
   <body>
-    <div class="container">
-      <header class="site-header">
+    <header class="site-header">
+      <div class="container">
         <nav class="navbar">
           <a href="/" class="nav-item">
             <span class="nav-icon">L</span>
@@ -17,10 +17,7 @@
           </a>
 
           <button class="nav-item" data-menu-open>
-            <span class="nav-icon">
-              <!-- buraya burger svg gelecek -->
-              ≡
-            </span>
+            <span class="nav-icon">≡</span>
             <span class="nav-label">Menu</span>
           </button>
 
@@ -29,8 +26,9 @@
             <span class="nav-label">Contact</span>
           </button>
         </nav>
-      </header>
-    </div>
+      </div>
+    </header>
+
     <main class="main">
       <div class="container">
         <section class="hero">
@@ -41,55 +39,202 @@
           />
           <h1 class="hero-title">
             <span id="changing-word" class="changing-word"></span>
-          </br>by <span class="leo">Leo Olsen</span>.
+            <br />by <span class="leo">Leo Olsen</span>.
           </h1>
-
-          <button class="hero-btn">See what I've built</button>
+          <div class="hero-buttons">
+            <button class="hero-btn">Explore Projects</button>
+            <button class="hero-btn">Contact Me</button>
+          </div>
           <p><span class="hero-dot">.</span> Available for new projects</p>
         </section>
       </div>
 
-      <div class="container">
-        <section class="about-me" id="about">
-           <h2>About Me</h2>
-           
-        </section>
-      </div>
+      <section class="about-me" id="about-me">
+        <div class="about-me__container">
+          <div class="about-me__header">
+            <p class="about-me__eyebrow">About Me</p>
 
+            <h2 class="about-me__title">I build digital experiences</h2>
+
+            <p class="about-me__text">
+              I focus on turning ideas into modern interfaces that feel simple,
+              useful and enjoyable to use. My work combines design sensitivity,
+              fullstack development and a clear problem-solving mindset.
+            </p>
+          </div>
+
+          <div class="about-me__cards">
+            <article class="about-card about-card--intro">
+              <span class="about-card__number">01</span>
+              <h3 class="about-card__title">
+                Fullstack Developer for Modern Web Projects
+              </h3>
+              <p class="about-card__body">
+                I build modern, responsive and business-focused web experiences
+                as a fullstack developer with experience in a multinational team
+                at GoDaddy. I work on freelance and project-based web
+                development with a focus on clean UI, usability and maintainable
+                code.
+              </p>
+            </article>
+
+            <article class="about-card about-card--timeline">
+              <span class="about-card__number">02</span>
+              <h3 class="about-card__title">Professional Experiences</h3>
+
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <span>GoDaddy | Website Specialist · 2012–2014</span>
+                  <p>
+                    Worked in an international team. Supported website-related
+                    processes and used Jira for structured workflows.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <span>Apple | Senior Technical Advisor · 5 years</span>
+                  <p>
+                    Provided multilingual technical support. Managed complex
+                    cases through iLog CRM with a solution-focused approach.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <span>Now</span>
+                  <p>
+                    Building project-based websites, web designs, social media
+                    visuals and digital marketing solutions.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="about-card about-card--approach">
+              <span class="about-card__number">03</span>
+              <h3 class="about-card__title">Design & Dev Approach</h3>
+
+              <ul class="principle-list">
+                <li>
+                  <span>↗</span>
+                  Clear user experience
+                </li>
+                <li>
+                  <span>✦</span>
+                  Scalable web structure
+                </li>
+                <li>
+                  <span>◌</span>
+                  Responsive interface design
+                </li>
+                <li>
+                  <span>⌁</span>
+                  Clean development workflow
+                </li>
+              </ul>
+            </article>
+
+            <article class="about-card about-card--stack">
+              <span class="about-card__number">04</span>
+              <h3 class="about-card__title">Tech Stack / Tools</h3>
+
+              <div class="stack-grid">
+                <div>
+                  <h4>Development</h4>
+                  <p>
+                    HTML, CSS, JS and GitHub to deploy responsive, structured
+                    web projects.
+                  </p>
+                </div>
+
+                <div>
+                  <h4>UI & Visual Design</h4>
+                  <p>Figma and Canva for UI planning and visual assets.</p>
+                </div>
+
+                <div>
+                  <h4>Workflow</h4>
+                  <p>
+                    Jira, Trello and Slack for organized colloboration and
+                    efficient project management.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="about-card about-card--personal">
+              <span class="about-card__number">05</span>
+
+              <h3 class="about-card__title">Beyond Code Skills</h3>
+
+              <div class="hobby-list">
+                <span>Clear Communication</span>
+                <span>Time Management</span>
+                <span>Structured Workflow</span>
+                <span>Team Collaboration</span>
+                <span>Solution-Oriented Mindset</span>
+              </div>
+
+              <div class="about-card__cta">
+                <p class="about-card__cta-text">Ready?</p>
+
+                <button class="about-card__cta-button" type="button">
+                  Let's Build Together
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <div class="container">
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="footer-logo">Leo Olsen</span>
-        <span class="footer-tagline"><span class="hero-dot">.</span> Available for new projects</span>
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <span class="footer-logo">Leo Olsen</span>
+
+              <p class="footer-tagline">
+                Crafting digital experiences with code and creativity.
+              </p>
+              <button class="footer-button">Let's talk</button>
+            </div>
+            <nav class="footer-nav">
+              <a href="about.html">About</a>
+              <a href="projects.html">Projects</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+          <hr class="footer-divider" />
+          <div class="footer-bottom">
+            <span class="footer-copy">© 2026 Leo Olsen</span>
+            <div class="footer-socials">
+              <a
+                href="https://github.com/..."
+                class="footer-social-btn"
+                aria-label="GitHub"
+              >
+                <span class="footer-s-icon"></span>
+                <span class="footer-s-label">GitHub</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/..."
+                class="footer-social-btn"
+                aria-label="LinkedIn"
+              >
+                <span class="footer-s-icon"></span>
+                <span class="footer-s-label">LinkedIn</span>
+              </a>
+              <a
+                href="mailto:leo@example.com"
+                class="footer-social-btn"
+                aria-label="Email"
+              >
+                <span class="footer-s-icon"></span>
+                <span class="footer-s-label">Email</span>
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
-      <nav class="footer-nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-    <hr class="footer-divider">
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Leo Olsen</span>
-      <div class="footer-socials">
-        <a href="https://github.com/..." class="footer-social-btn" aria-label="GitHub">
-          <span class="footer-s-icon"><!-- GitHub SVG --></span>
-          <span class="footer-s-label">GitHub</span>
-        </a>
-        <a href="https://linkedin.com/in/..." class="footer-social-btn" aria-label="LinkedIn">
-          <span class="footer-s-icon"><!-- LinkedIn SVG --></span>
-          <span class="footer-s-label">LinkedIn</span>
-        </a>
-        <a href="mailto:leo@example.com" class="footer-social-btn" aria-label="Email">
-          <span class="footer-s-icon"><!-- Mail SVG --></span>
-          <span class="footer-s-label">Email</span>
-        </a>
-      </div>
-    </div>
-  </footer>
-</div>
     </main>
 
     <script src="./src/js/main.js"></script>

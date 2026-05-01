@@ -1,0 +1,427 @@
+.about-me {
+  --about-card-top: 24px;
+  --about-card-height: 520px;
+  --about-card-gap: 72px;
+  --about-card-end-space: 520px;
+
+  padding: 40px 0;
+  color: #111;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.about-me__container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-me__header {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.about-me__eyebrow {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.about-me__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 0.9;
+}
+
+.about-me__text {
+  margin: 22px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.about-me__cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--about-card-gap);
+}
+
+.about-card {
+  position: sticky;
+  top: var(--about-card-top);
+
+  width: 100%;
+  max-width: 100%;
+  height: var(--about-card-height);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 22px;
+  margin: 0;
+
+  overflow: hidden;
+
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, var(--card-border), transparent 70%) border-box;
+
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.08);
+}
+
+.about-card--intro {
+  --card-border: #ff7a59;
+  z-index: 1;
+}
+
+.about-card--timeline {
+  --card-border: #7c5cff;
+  z-index: 2;
+}
+
+.about-card--approach {
+  --card-border: #00a896;
+  z-index: 3;
+}
+
+.about-card--stack {
+  --card-border: #f5b700;
+  z-index: 4;
+}
+
+.about-card--personal {
+  --card-border: #ef476f;
+  z-index: 5;
+}
+
+.about-card__number {
+  width: fit-content;
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.about-card__title {
+  margin: 24px 0 18px;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.about-card__body {
+  max-width: 700px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #444;
+}
+
+.timeline-list {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.timeline-item span {
+  font-weight: 800;
+  color: #111;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.2;
+}
+
+.principle-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.principle-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 18px;
+  color: #333;
+  background: #fafafa;
+}
+
+.principle-list span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+}
+
+.stack-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stack-grid div {
+  padding: 16px;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  background: #fafafa;
+}
+
+.stack-grid h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.stack-grid p {
+  margin: 0;
+  color: #555;
+  line-height: 1;
+}
+
+.hobby-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hobby-list span {
+  padding: 11px 14px;
+  border: 1px solid #e1e1e1;
+  border-radius: 999px;
+  background: #fafafa;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about-card--personal {
+  display: flex;
+  flex-direction: column;
+}
+
+.hobby-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hobby-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #111;
+  background-color: #f4f4f4;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.about-card__cta {
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-card__cta p {
+  line-height: 1.6;
+  padding-left: 8px;
+  font-weight: 500;
+}
+
+.about-card__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 12px 18px;
+
+  border: 1px solid #111;
+  border-radius: 999px;
+
+  background-color: #111827;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.about-card__cta-button:hover,
+.about-card__cta-button:focus-visible {
+  background-color: transparent;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.12);
+}
+
+.about-card__cta-button:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    --about-card-top: 32px;
+    --about-card-height: 560px;
+    --about-card-gap: 100px;
+    --about-card-end-space: 560px;
+
+    padding: 50px 0;
+  }
+
+  .about-me__container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .about-me__header {
+    margin-bottom: 56px;
+  }
+
+  .about-me__title {
+    font-size: 42px;
+  }
+
+  .about-me__text {
+    font-size: 18px;
+  }
+
+  .about-card {
+    padding: 36px;
+    border-radius: 26px;
+  }
+
+  .about-card__title {
+    margin-top: 36px;
+    font-size: 44px;
+  }
+
+  .about-card__body {
+    font-size: 18px;
+  }
+
+  .timeline-list {
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 90px 1fr;
+    gap: 20px;
+    padding-top: 18px;
+  }
+
+  .principle-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .principle-list li {
+    padding: 18px;
+  }
+
+  .stack-grid {
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .stack-grid div {
+    padding: 20px;
+  }
+
+  .hobby-list {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .hobby-list span {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .about-me {
+    --about-card-top: 40px;
+    --about-card-height: 560px;
+    --about-card-gap: 120px;
+    --about-card-end-space: 560px;
+
+    padding: 80px 0;
+  }
+
+  .about-me__container {
+    max-width: 1158px;
+    padding: 0 40px;
+  }
+
+  .about-me__header {
+    margin-bottom: 96px;
+  }
+
+  .about-card {
+    padding: 48px;
+    border-radius: 28px;
+  }
+
+  .about-card__title {
+    margin-top: 36px;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

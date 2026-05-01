@@ -24,7 +24,8 @@
 .footer-tagline {
   font-size: 12px;
   letter-spacing: 0.04em;
-  opacity: 0.55;
+  margin-bottom: 8px;
+  margin-top: 12px;
 }
 
 .footer-nav {
@@ -34,11 +35,11 @@
   gap: 8px;
 }
 .footer-nav a {
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
   color: #111;
   letter-spacing: 0.03em;
-  opacity: 0.7;
   transition:
     color 160ms ease,
     opacity 160ms ease;
@@ -60,7 +61,7 @@
   justify-content: space-between;
 }
 .footer-copy {
-  font-size: 11px;
+  font-size: 12px;
   opacity: 0.45;
   letter-spacing: 0.03em;
 }
@@ -74,7 +75,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  text-decoration: none;
   color: #111;
   transition: transform 180ms ease;
 }
@@ -88,10 +88,30 @@
   transition: transform 160ms ease;
 }
 .footer-s-label {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.04em;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 .footer-social-btn:hover .footer-s-label {
   opacity: 1;
+}
+
+.footer-button {
+  max-width: 90px;
+  padding: 8px 0px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.footer-button:hover {
+  background-color: #3b46b1;
+  transform: translateY(-2px);
 }

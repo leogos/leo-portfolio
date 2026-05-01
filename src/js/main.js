@@ -1,9 +1,4 @@
-const words = [
-  "Clean designs",
-  "Fast designs",
-  "Lean designs",
-  "Fresh designs",
-];
+const words = ["Fast deploys", "Modern code", "Solid logic", "Sharp pages"];
 let current = 0;
 const container = document.getElementById("changing-word");
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

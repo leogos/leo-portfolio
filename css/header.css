@@ -2,30 +2,38 @@
   padding-top: 80px;
 }
 
+/* HEADER */
 .site-header {
-  display: flex;
-  justify-content: center;
-  padding: 12px 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box;
   z-index: 100;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  justify-content: center;
+
+  padding: 12px 0px;
+  box-sizing: border-box;
 }
 
+/* NAVBAR (asıl ortalama burada) */
 .navbar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+
   padding: 8px 16px;
   border-radius: 12px;
   border: 1px solid lightgray;
   background: #fff;
+
   width: 100%;
+  max-width: 1158px; /* ✅ ortalama için kritik */
+  margin: 0 auto; /* ✅ ortalar */
 }
 
+/* NAV ITEM */
 .nav-item {
   border: none;
   background: transparent;
@@ -75,4 +83,18 @@
 .nav-item:focus-visible {
   outline: 2px solid #000;
   outline-offset: 6px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .site-header {
+    padding: 12px 32px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1158px) {
+  .site-header {
+    padding: 12px 0; /* ❗ taşmayı engelledik */
+  }
 }
