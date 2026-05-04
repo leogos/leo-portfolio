@@ -1,0 +1,199 @@
+.references-section {
+  color: #ffffff;
+  padding: 48px 0;
+  overflow: hidden;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(255, 255, 255, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 100%,
+      rgba(120, 120, 120, 0.14),
+      transparent 32%
+    ),
+    linear-gradient(145deg, #181818 0%, #101010 48%, #070707 100%);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.references-content {
+  max-width: 620px;
+  padding: 0 24px;
+  margin-bottom: 40px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.references-content h2 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.references-content p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.references-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.references-marquee::before,
+.references-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 96px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.references-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #111111, transparent);
+}
+
+.references-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #111111, transparent);
+}
+
+.references-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: references-slide 28s linear infinite;
+}
+.references-track img {
+  width: 260px;
+  height: 120px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  padding: 12px 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  filter: none;
+  opacity: 1;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.references-track img:hover {
+  transform: translateY(-2px);
+  filter: none;
+  opacity: 1;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.references-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 24px 0;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.references-cta:hover {
+  transform: translateY(-2px);
+  opacity: 0.88;
+}
+
+@keyframes references-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .references-section {
+    padding: 64px 0;
+    margin: 100px 0;
+  }
+
+  .references-content {
+    padding: 0 40px;
+    margin-bottom: 48px;
+  }
+
+  .references-track {
+    gap: 24px;
+  }
+
+  .references-track img {
+    .references-track img {
+      width: 280px;
+      height: 125px;
+      padding: 14px 24px;
+    }
+  }
+
+  .references-cta {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .references-section {
+    border-radius: 28px;
+  }
+
+  .references-content {
+    padding: 0 48px;
+  }
+
+  .references-cta {
+    margin-left: 48px;
+  }
+
+  .references-track img {
+    .references-track img {
+      width: 320px;
+      height: 140px;
+      padding: 16px 28px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .references-track {
+    animation: none;
+  }
+}

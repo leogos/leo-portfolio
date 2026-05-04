@@ -1,0 +1,49 @@
+.ad-marquee {
+  padding: 20px 0 0;
+}
+
+.ad-marquee-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ad-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+}
+
+.ad-marquee-item {
+  flex-shrink: 0;
+  padding-right: 24px;
+  font-size: clamp(38px, 8vw, 112px);
+  font-weight: 500;
+  white-space: nowrap;
+  color: #111;
+}
+
+.ad-marquee-item strong {
+  font-weight: 500;
+  color: #4d5ae5;
+}
+
+@media (min-width: 768px) {
+  .ad-marquee {
+    padding-top: 28px;
+  }
+
+  .ad-marquee-item {
+    padding-right: 72px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .ad-marquee {
+    padding-top: 36px;
+  }
+
+  .ad-marquee-item {
+    padding-right: 96px;
+  }
+}

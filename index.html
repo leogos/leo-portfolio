@@ -36,6 +36,8 @@
             src="./src/img/pp.avif"
             alt="Leo Olsen's profile picture"
             srcset="./src/img/pp.avif 1x, ./src/img/pp@2x.avif 2x type='image/avif'"
+            width="240"
+            height="240"
           />
           <h1 class="hero-title">
             <span id="changing-word" class="changing-word"></span>
@@ -48,6 +50,18 @@
           <p><span class="hero-dot">.</span> Available for new projects</p>
         </section>
       </div>
+
+      <section class="ad-marquee" aria-label="Brand statement">
+        <div class="container">
+          <div class="ad-marquee-viewport">
+            <div class="ad-marquee-track" id="ad-marquee-track">
+              <span class="ad-marquee-item">
+                Empower your brand with <strong>digital strength</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="about-me" id="about-me">
         <div class="about-me__container">
@@ -115,19 +129,19 @@
 
               <ul class="principle-list">
                 <li>
-                  <span>↗</span>
+                  <span>→</span>
                   Clear user experience
                 </li>
                 <li>
-                  <span>✦</span>
+                  <span>+</span>
                   Scalable web structure
                 </li>
                 <li>
-                  <span>◌</span>
+                  <span>•</span>
                   Responsive interface design
                 </li>
                 <li>
-                  <span>⌁</span>
+                  <span>/</span>
                   Clean development workflow
                 </li>
               </ul>
@@ -187,49 +201,221 @@
       </section>
 
       <div class="container">
+        <section class="references-section" aria-labelledby="references-title">
+          <div class="references-content">
+            <span class="section-label">References</span>
+
+            <h2 id="references-title">Selected work = trusted results</h2>
+
+            <p>
+              References from web experiences shaped with clean UI, solid
+              structure and practical fullstack development.
+            </p>
+          </div>
+
+          <div
+            class="references-marquee"
+            aria-label="Customer and project references"
+          >
+            <div class="references-track">
+              <img
+                src="./src/img/hwa.avif"
+                srcset="./src/img/hwa.avif 1x, ./src/img/hwa@2x.avif 2x"
+                alt="HWA project reference"
+                width="180"
+                height="80"
+                loading="lazy"
+              />
+
+              <img
+                src="./src/img/mtm.avif"
+                srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x"
+                alt="MTM project reference"
+                width="180"
+                height="80"
+                loading="lazy"
+              />
+
+              <img
+                src="./src/img/mvip.avif"
+                srcset="./src/img/mvip.avif 1x, ./src/img/mvip@2x.avif 2x"
+                alt="MVIP project reference"
+                width="180"
+                height="80"
+                loading="lazy"
+              />
+
+              <img
+                src="./src/img/tarekoder.avif"
+                srcset="
+                  ./src/img/tarekoder.avif    1x,
+                  ./src/img/tarekoder@2x.avif 2x
+                "
+                alt="Tarekoder project reference"
+                width="180"
+                height="80"
+                loading="lazy"
+              />
+
+              <img
+                src="./src/img/tozkaya.avif"
+                srcset="./src/img/tozkaya.avif 1x, ./src/img/tozkaya@2x.avif 2x"
+                alt="Tozkaya project reference"
+                width="180"
+                height="80"
+                loading="lazy"
+              />
+
+              <!-- Duplicate set for seamless marquee loop -->
+              <img
+                src="./src/img/hwa.avif"
+                srcset="./src/img/hwa.avif 1x, ./src/img/hwa@2x.avif 2x"
+                alt=""
+                width="180"
+                height="80"
+                loading="lazy"
+                aria-hidden="true"
+              />
+
+              <img
+                src="./src/img/mtm.avif"
+                srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x"
+                alt=""
+                width="180"
+                height="80"
+                loading="lazy"
+                aria-hidden="true"
+              />
+
+              <img
+                src="./src/img/mvip.avif"
+                srcset="./src/img/mvip.avif 1x, ./src/img/mvip@2x.avif 2x"
+                alt=""
+                width="180"
+                height="80"
+                loading="lazy"
+                aria-hidden="true"
+              />
+
+              <img
+                src="./src/img/tarekoder.avif"
+                srcset="
+                  ./src/img/tarekoder.avif    1x,
+                  ./src/img/tarekoder@2x.avif 2x
+                "
+                alt=""
+                width="180"
+                height="80"
+                loading="lazy"
+                aria-hidden="true"
+              />
+
+              <img
+                src="./src/img/tms.avif"
+                srcset="./src/img/tms.avif 1x, ./src/img/tms@2x.avif 2x"
+                alt=""
+                width="180"
+                height="80"
+                loading="lazy"
+                aria-hidden="true"
+              />
+
+              <img
+                src="./src/img/tozkaya.avif"
+                srcset="./src/img/tozkaya.avif 1x, ./src/img/tozkaya@2x.avif 2x"
+                alt=""
+                width="180"
+                height="80"
+                loading="lazy"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+
+          <a href="#contact" class="references-cta">Start Your Web Project</a>
+        </section>
+      </div>
+      <div class="container">
         <footer class="footer">
           <div class="footer-top">
             <div class="footer-brand">
               <span class="footer-logo">Leo Olsen</span>
 
               <p class="footer-tagline">
-                Crafting digital experiences with code and creativity.
+                Building clean, responsive and thoughtful web experiences.
               </p>
-              <button class="footer-button">Let's talk</button>
+
+              <a href="contact.html" class="footer-button">Let's talk</a>
             </div>
-            <nav class="footer-nav">
+
+            <nav class="footer-nav" aria-label="Footer navigation">
               <a href="about.html">About</a>
               <a href="projects.html">Projects</a>
               <a href="contact.html">Contact</a>
             </nav>
           </div>
+
+          <div class="footer-middle">
+            <div class="footer-status">
+              <span class="footer-status-dot"></span>
+              <span>Available for freelance and project-based work</span>
+            </div>
+
+            <form
+              name="project-inquiry"
+              method="POST"
+              data-netlify="true"
+              class="footer-form"
+            >
+              <input type="hidden" name="form-name" value="project-inquiry" />
+
+              <label class="footer-form-label" for="footer-email">
+                Have a project in mind?
+              </label>
+
+              <div class="footer-form-row">
+                <input
+                  id="footer-email"
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                />
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+
           <hr class="footer-divider" />
+
           <div class="footer-bottom">
-            <span class="footer-copy">© 2026 Leo Olsen</span>
+            <span class="footer-copy"
+              >© 2026 Leo Olsen. All rights reserved.</span
+            >
+
             <div class="footer-socials">
               <a
                 href="https://github.com/..."
                 class="footer-social-btn"
                 aria-label="GitHub"
               >
-                <span class="footer-s-icon"></span>
-                <span class="footer-s-label">GitHub</span>
+                GitHub
               </a>
+
               <a
                 href="https://linkedin.com/in/..."
                 class="footer-social-btn"
                 aria-label="LinkedIn"
               >
-                <span class="footer-s-icon"></span>
-                <span class="footer-s-label">LinkedIn</span>
+                LinkedIn
               </a>
+
               <a
                 href="mailto:leo@example.com"
                 class="footer-social-btn"
                 aria-label="Email"
               >
-                <span class="footer-s-icon"></span>
-                <span class="footer-s-label">Email</span>
+                Email
               </a>
             </div>
           </div>

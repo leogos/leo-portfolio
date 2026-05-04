@@ -59,3 +59,41 @@ window.addEventListener("scroll", () => {
 
   lastScroll = current;
 });
+
+/*AD MARQUEE*/
+(() => {
+  const track = document.getElementById("ad-marquee-track");
+
+  if (!track) return;
+
+  track.innerHTML = `
+    <span class="ad-marquee-item">
+    Empower your brand with <strong>digital strength!</strong>
+    </span>
+    <span class="ad-marquee-item">
+    Empower your brand with <strong>digital strength!</strong>
+    </span>
+    <span class="ad-marquee-item">
+    Empower your brand with <strong>digital strength!</strong>
+    </span>
+    <span class="ad-marquee-item">
+    Empower your brand with <strong>digital strength!</strong>
+    </span>
+  `;
+
+  let position = 0;
+
+  function animateMarquee() {
+    position -= 0.7;
+
+    if (Math.abs(position) >= track.scrollWidth / 2) {
+      position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+
+    requestAnimationFrame(animateMarquee);
+  }
+
+  animateMarquee();
+})();
