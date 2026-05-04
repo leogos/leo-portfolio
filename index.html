@@ -1,428 +1,407 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leo Olsen | Web Developer</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="site-header">
-      <div class="container">
-        <nav class="navbar">
-          <a href="/" class="nav-item">
-            <span class="nav-icon">L</span>
-            <span class="nav-label">That Developer</span>
-          </a>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="nav-item">
+                    <span class="nav-icon">L</span>
+                    <span class="nav-label">That Developer</span>
+                </a>
 
-          <button class="nav-item" data-menu-open>
-            <span class="nav-icon">≡</span>
-            <span class="nav-label">Menu</span>
-          </button>
+                <button class="nav-item" data-menu-open aria-label="Open menu">
+                    <span class="nav-icon">≡</span>
+                    <span class="nav-label">Menu</span>
+                </button>
 
-          <button class="nav-item" data-contact-open>
-            <span class="nav-icon">O</span>
-            <span class="nav-label">Contact</span>
-          </button>
-        </nav>
-      </div>
+                <button class="nav-item" data-contact-open>
+                    <span class="nav-icon">O</span>
+                    <span class="nav-label">Contact</span>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <main class="main">
-      <div class="container">
-        <section class="hero">
-          <img
-            src="./src/img/pp.avif"
-            alt="Leo Olsen's profile picture"
-            srcset="./src/img/pp.avif 1x, ./src/img/pp@2x.avif 2x type='image/avif'"
-            width="240"
-            height="240"
-          />
-          <h1 class="hero-title">
-            <span id="changing-word" class="changing-word"></span>
-            <br />by <span class="leo">Leo Olsen</span>.
-          </h1>
-          <div class="hero-buttons">
-            <button class="hero-btn">Explore Projects</button>
-            <button class="hero-btn">Contact Me</button>
-          </div>
-          <p><span class="hero-dot">.</span> Available for new projects</p>
-        </section>
-      </div>
-
-      <section class="ad-marquee" aria-label="Brand statement">
         <div class="container">
-          <div class="ad-marquee-viewport">
-            <div class="ad-marquee-track" id="ad-marquee-track">
-              <span class="ad-marquee-item">
-                Empower your brand with <strong>digital strength</strong>
-              </span>
-            </div>
-          </div>
+            <section class="hero">
+                <img src="./src/img/pp.avif" alt="Leo Olsen's profile picture"
+                    srcset="./src/img/pp.avif 1x, ./src/img/pp@2x.avif 2x type='image/avif'" width="240" height="240" />
+                <h1 class="hero-title">
+                    <span id="changing-word" class="changing-word"></span>
+                    <br />by <span class="leo">Leo Olsen</span>.
+                </h1>
+                <div class="hero-buttons">
+                    <button class="hero-btn">Explore Projects</button>
+                    <button class="hero-btn">Contact Me</button>
+                </div>
+                <p><span class="hero-dot">.</span> Available for new projects</p>
+            </section>
         </div>
-      </section>
 
-      <section class="about-me" id="about-me">
-        <div class="about-me__container">
-          <div class="about-me__header">
-            <p class="about-me__eyebrow">About Me</p>
-
-            <h2 class="about-me__title">I build digital experiences</h2>
-
-            <p class="about-me__text">
-              I focus on turning ideas into modern interfaces that feel simple,
-              useful and enjoyable to use. My work combines design sensitivity,
-              fullstack development and a clear problem-solving mindset.
-            </p>
-          </div>
-
-          <div class="about-me__cards">
-            <article class="about-card about-card--intro">
-              <span class="about-card__number">01</span>
-              <h3 class="about-card__title">
-                Fullstack Developer for Modern Web Projects
-              </h3>
-              <p class="about-card__body">
-                I build modern, responsive and business-focused web experiences
-                as a fullstack developer with experience in a multinational team
-                at GoDaddy. I work on freelance and project-based web
-                development with a focus on clean UI, usability and maintainable
-                code.
-              </p>
-            </article>
-
-            <article class="about-card about-card--timeline">
-              <span class="about-card__number">02</span>
-              <h3 class="about-card__title">Professional Experiences</h3>
-
-              <div class="timeline-list">
-                <div class="timeline-item">
-                  <span>GoDaddy | Website Specialist · 2012–2014</span>
-                  <p>
-                    Worked in an international team. Supported website-related
-                    processes and used Jira for structured workflows.
-                  </p>
+        <section class="ad-marquee" aria-label="Brand statement">
+            <div class="container">
+                <div class="ad-marquee-viewport">
+                    <div class="ad-marquee-track" id="ad-marquee-track">
+                        <span class="ad-marquee-item">
+                            Empower your brand with <strong>digital strength</strong>
+                        </span>
+                    </div>
                 </div>
-
-                <div class="timeline-item">
-                  <span>Apple | Senior Technical Advisor · 5 years</span>
-                  <p>
-                    Provided multilingual technical support. Managed complex
-                    cases through iLog CRM with a solution-focused approach.
-                  </p>
-                </div>
-
-                <div class="timeline-item">
-                  <span>Now</span>
-                  <p>
-                    Building project-based websites, web designs, social media
-                    visuals and digital marketing solutions.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article class="about-card about-card--approach">
-              <span class="about-card__number">03</span>
-              <h3 class="about-card__title">Design & Dev Approach</h3>
-
-              <ul class="principle-list">
-                <li>
-                  <span>→</span>
-                  Clear user experience
-                </li>
-                <li>
-                  <span>+</span>
-                  Scalable web structure
-                </li>
-                <li>
-                  <span>•</span>
-                  Responsive interface design
-                </li>
-                <li>
-                  <span>/</span>
-                  Clean development workflow
-                </li>
-              </ul>
-            </article>
-
-            <article class="about-card about-card--stack">
-              <span class="about-card__number">04</span>
-              <h3 class="about-card__title">Tech Stack / Tools</h3>
-
-              <div class="stack-grid">
-                <div>
-                  <h4>Development</h4>
-                  <p>
-                    HTML, CSS, JS and GitHub to deploy responsive, structured
-                    web projects.
-                  </p>
-                </div>
-
-                <div>
-                  <h4>UI & Visual Design</h4>
-                  <p>Figma and Canva for UI planning and visual assets.</p>
-                </div>
-
-                <div>
-                  <h4>Workflow</h4>
-                  <p>
-                    Jira, Trello and Slack for organized colloboration and
-                    efficient project management.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article class="about-card about-card--personal">
-              <span class="about-card__number">05</span>
-
-              <h3 class="about-card__title">Beyond Code Skills</h3>
-
-              <div class="hobby-list">
-                <span>Clear Communication</span>
-                <span>Time Management</span>
-                <span>Structured Workflow</span>
-                <span>Team Collaboration</span>
-                <span>Solution-Oriented Mindset</span>
-              </div>
-
-              <div class="about-card__cta">
-                <p class="about-card__cta-text">Ready?</p>
-
-                <button class="about-card__cta-button" type="button">
-                  Let's Build Together
-                </button>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <div class="container">
-        <section class="references-section" aria-labelledby="references-title">
-          <div class="references-content">
-            <span class="section-label">References</span>
-
-            <h2 id="references-title">Selected work = trusted results</h2>
-
-            <p>
-              References from web experiences shaped with clean UI, solid
-              structure and practical fullstack development.
-            </p>
-          </div>
-
-          <div
-            class="references-marquee"
-            aria-label="Customer and project references"
-          >
-            <div class="references-track">
-              <img
-                src="./src/img/hwa.avif"
-                srcset="./src/img/hwa.avif 1x, ./src/img/hwa@2x.avif 2x"
-                alt="HWA project reference"
-                width="180"
-                height="80"
-                loading="lazy"
-              />
-
-              <img
-                src="./src/img/mtm.avif"
-                srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x"
-                alt="MTM project reference"
-                width="180"
-                height="80"
-                loading="lazy"
-              />
-
-              <img
-                src="./src/img/mvip.avif"
-                srcset="./src/img/mvip.avif 1x, ./src/img/mvip@2x.avif 2x"
-                alt="MVIP project reference"
-                width="180"
-                height="80"
-                loading="lazy"
-              />
-
-              <img
-                src="./src/img/tarekoder.avif"
-                srcset="
-                  ./src/img/tarekoder.avif    1x,
-                  ./src/img/tarekoder@2x.avif 2x
-                "
-                alt="Tarekoder project reference"
-                width="180"
-                height="80"
-                loading="lazy"
-              />
-
-              <img
-                src="./src/img/tozkaya.avif"
-                srcset="./src/img/tozkaya.avif 1x, ./src/img/tozkaya@2x.avif 2x"
-                alt="Tozkaya project reference"
-                width="180"
-                height="80"
-                loading="lazy"
-              />
-
-              <!-- Duplicate set for seamless marquee loop -->
-              <img
-                src="./src/img/hwa.avif"
-                srcset="./src/img/hwa.avif 1x, ./src/img/hwa@2x.avif 2x"
-                alt=""
-                width="180"
-                height="80"
-                loading="lazy"
-                aria-hidden="true"
-              />
-
-              <img
-                src="./src/img/mtm.avif"
-                srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x"
-                alt=""
-                width="180"
-                height="80"
-                loading="lazy"
-                aria-hidden="true"
-              />
-
-              <img
-                src="./src/img/mvip.avif"
-                srcset="./src/img/mvip.avif 1x, ./src/img/mvip@2x.avif 2x"
-                alt=""
-                width="180"
-                height="80"
-                loading="lazy"
-                aria-hidden="true"
-              />
-
-              <img
-                src="./src/img/tarekoder.avif"
-                srcset="
-                  ./src/img/tarekoder.avif    1x,
-                  ./src/img/tarekoder@2x.avif 2x
-                "
-                alt=""
-                width="180"
-                height="80"
-                loading="lazy"
-                aria-hidden="true"
-              />
-
-              <img
-                src="./src/img/tms.avif"
-                srcset="./src/img/tms.avif 1x, ./src/img/tms@2x.avif 2x"
-                alt=""
-                width="180"
-                height="80"
-                loading="lazy"
-                aria-hidden="true"
-              />
-
-              <img
-                src="./src/img/tozkaya.avif"
-                srcset="./src/img/tozkaya.avif 1x, ./src/img/tozkaya@2x.avif 2x"
-                alt=""
-                width="180"
-                height="80"
-                loading="lazy"
-                aria-hidden="true"
-              />
             </div>
-          </div>
-
-          <a href="#contact" class="references-cta">Start Your Web Project</a>
         </section>
+        <section class="about-me" id="about-me">
+            <div class="about-me-container">
+                <div class="about-me-header">
+                    <p class="about-me-eyebrow">About Me</p>
+
+                    <h2 class="about-me-title">I build digital experiences</h2>
+
+                    <p class="about-me-text">
+                        I focus on turning ideas into modern interfaces that feel simple,
+                        useful and enjoyable to use. My work combines design sensitivity,
+                        fullstack development and a clear problem-solving mindset.
+                    </p>
+                </div>
+
+                <div class="about-me-cards">
+                    <article class="about-card about-card-intro">
+                        <span class="about-card-number">01</span>
+                        <h3 class="about-card-title">
+                            Fullstack Developer for Modern Web Projects
+                        </h3>
+                        <p class="about-card-body">
+                            I build modern, responsive and business-focused web experiences
+                            as a fullstack developer with experience in a multinational team
+                            at GoDaddy. I work on freelance and project-based web
+                            development with a focus on clean UI, usability and maintainable
+                            code.
+                        </p>
+                    </article>
+
+                    <article class="about-card about-card-timeline">
+                        <span class="about-card-number">02</span>
+                        <h3 class="about-card-title">Professional Experiences</h3>
+
+                        <div class="timeline-list">
+                            <div class="timeline-item">
+                                <span>GoDaddy | Website Specialist · 2012–2014</span>
+                                <p>
+                                    Worked in an international team. Supported website-related
+                                    processes and used Jira for structured workflows.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>Apple | Senior Technical Advisor · 5 years</span>
+                                <p>
+                                    Provided multilingual technical support. Managed complex
+                                    cases through iLog CRM with a solution-focused approach.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>Now</span>
+                                <p>
+                                    Building project-based websites, web designs, social media
+                                    visuals and digital marketing solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="about-card about-card-approach">
+                        <span class="about-card-number">03</span>
+                        <h3 class="about-card-title">Design & Dev Approach</h3>
+
+                        <ul class="principle-list">
+                            <li>
+                                <span>→</span>
+                                Clear user experience
+                            </li>
+                            <li>
+                                <span>+</span>
+                                Scalable web structure
+                            </li>
+                            <li>
+                                <span>•</span>
+                                Responsive interface design
+                            </li>
+                            <li>
+                                <span>/</span>
+                                Clean development workflow
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card about-card-stack">
+                        <span class="about-card-number">04</span>
+                        <h3 class="about-card-title">Tech Stack / Tools</h3>
+
+                        <div class="stack-grid">
+                            <div>
+                                <h4>Development</h4>
+                                <p>
+                                    HTML, CSS, JS and GitHub to deploy responsive, structured
+                                    web projects.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4>UI & Visual Design</h4>
+                                <p>Figma and Canva for UI planning and visual assets.</p>
+                            </div>
+
+                            <div>
+                                <h4>Workflow</h4>
+                                <p>
+                                    Jira, Trello and Slack for organized colloboration and
+                                    efficient project management.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="about-card about-card-personal">
+                        <span class="about-card-number">05</span>
+
+                        <h3 class="about-card-title">Beyond Code Skills</h3>
+
+                        <div class="hobby-list">
+                            <span>Clear Communication</span>
+                            <span>Time Management</span>
+                            <span>Structured Workflow</span>
+                            <span>Team Collaboration</span>
+                            <span>Solution-Oriented Mindset</span>
+                        </div>
+
+                        <div class="about-card-cta">
+                            <p class="about-card-cta-text">Ready?</p>
+
+                            <button class="about-card-cta-button" type="button">
+                                Let's Build Together
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+<section class="projects-preview">
+  <div class="container">
+    <div class="projects-preview-content">
+      <span class="projects-preview-label">Selected work</span>
+
+      <div class="projects-preview-image-wrap">
+        <img
+          class="projects-preview-image"
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+          alt="Website dashboard preview on a laptop screen"
+          width="1200"
+          height="800"
+        />
       </div>
-      <div class="container">
-        <footer class="footer">
-          <div class="footer-top">
-            <div class="footer-brand">
-              <span class="footer-logo">Leo Olsen</span>
 
-              <p class="footer-tagline">
-                Building clean, responsive and thoughtful web experiences.
-              </p>
+      <div class="projects-preview-text">
+        <h2 class="projects-preview-title">
+          Websites shaped to feel clear useful and ready to grow
+        </h2>
 
-              <a href="contact.html" class="footer-button">Let's talk</a>
-            </div>
+        <p class="projects-preview-description">
+          Explore selected website work focused on clean structure responsive
+          layouts and smoother ways for visitors to understand trust and take
+          action.
+        </p>
 
-            <nav class="footer-nav" aria-label="Footer navigation">
-              <a href="about.html">About</a>
-              <a href="projects.html">Projects</a>
-              <a href="contact.html">Contact</a>
-            </nav>
-          </div>
-
-          <div class="footer-middle">
-            <div class="footer-status">
-              <span class="footer-status-dot"></span>
-              <span>Available for freelance and project-based work</span>
-            </div>
-
-            <form
-              name="project-inquiry"
-              method="POST"
-              data-netlify="true"
-              class="footer-form"
-            >
-              <input type="hidden" name="form-name" value="project-inquiry" />
-
-              <label class="footer-form-label" for="footer-email">
-                Have a project in mind?
-              </label>
-
-              <div class="footer-form-row">
-                <input
-                  id="footer-email"
-                  type="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                />
-                <button type="submit">Send</button>
-              </div>
-            </form>
-          </div>
-
-          <hr class="footer-divider" />
-
-          <div class="footer-bottom">
-            <span class="footer-copy"
-              >© 2026 Leo Olsen. All rights reserved.</span
-            >
-
-            <div class="footer-socials">
-              <a
-                href="https://github.com/..."
-                class="footer-social-btn"
-                aria-label="GitHub"
-              >
-                GitHub
-              </a>
-
-              <a
-                href="https://linkedin.com/in/..."
-                class="footer-social-btn"
-                aria-label="LinkedIn"
-              >
-                LinkedIn
-              </a>
-
-              <a
-                href="mailto:leo@example.com"
-                class="footer-social-btn"
-                aria-label="Email"
-              >
-                Email
-              </a>
-            </div>
-          </div>
-        </footer>
+        <a href="projects.html" class="projects-preview-button">
+          View Projects
+        </a>
       </div>
+    </div>
+  </div>
+</section>
+
+        <div class="container">
+            <section class="references-section" aria-labelledby="references-title">
+                <div class="references-content">
+                    <span class="section-label">References</span>
+
+                    <h2 id="references-title">Selected work = trusted results</h2>
+
+                    <p>
+                        References from web experiences shaped with clean UI, solid
+                        structure and practical fullstack development.
+                    </p>
+                </div>
+
+                <div class="references-marquee" aria-label="Customer and project references">
+                    <div class="references-track">
+                        <img src="./src/img/hwa.avif" srcset="./src/img/hwa.avif 1x, ./src/img/hwa@2x.avif 2x"
+                            alt="HWA project reference" width="180" height="80" loading="lazy" />
+
+                        <img src="./src/img/mtm.avif" srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x"
+                            alt="MTM project reference" width="180" height="80" loading="lazy" />
+
+                        <img src="./src/img/mvip.avif" srcset="./src/img/mvip.avif 1x, ./src/img/mvip@2x.avif 2x"
+                            alt="MVIP project reference" width="180" height="80" loading="lazy" />
+
+                        <img src="./src/img/tarekoder.avif" srcset="
+                  ./src/img/tarekoder.avif    1x,
+                  ./src/img/tarekoder@2x.avif 2x
+                " alt="Tarekoder project reference" width="180" height="80" loading="lazy" />
+
+                        <img src="./src/img/tozkaya.avif"
+                            srcset="./src/img/tozkaya.avif 1x, ./src/img/tozkaya@2x.avif 2x"
+                            alt="Tozkaya project reference" width="180" height="80" loading="lazy" />
+
+                        <img src="./src/img/hwa.avif" srcset="./src/img/hwa.avif 1x, ./src/img/hwa@2x.avif 2x" alt=""
+                            width="180" height="80" loading="lazy" aria-hidden="true" />
+
+                        <img src="./src/img/mtm.avif" srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x" alt=""
+                            width="180" height="80" loading="lazy" aria-hidden="true" />
+
+                        <img src="./src/img/mvip.avif" srcset="./src/img/mvip.avif 1x, ./src/img/mvip@2x.avif 2x" alt=""
+                            width="180" height="80" loading="lazy" aria-hidden="true" />
+
+                        <img src="./src/img/tarekoder.avif" srcset="
+                  ./src/img/tarekoder.avif    1x,
+                  ./src/img/tarekoder@2x.avif 2x
+                " alt="" width="180" height="80" loading="lazy" aria-hidden="true" />
+
+                        <img src="./src/img/tms.avif" srcset="./src/img/tms.avif 1x, ./src/img/tms@2x.avif 2x" alt=""
+                            width="180" height="80" loading="lazy" aria-hidden="true" />
+
+                        <img src="./src/img/tozkaya.avif"
+                            srcset="./src/img/tozkaya.avif 1x, ./src/img/tozkaya@2x.avif 2x" alt="" width="180"
+                            height="80" loading="lazy" aria-hidden="true" />
+                    </div>
+                </div>
+
+                <a href="#contact" class="references-cta">Start Your Web Project</a>
+            </section>
+        </div>
+        <div class="container">
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <span class="footer-logo">Leo Olsen</span>
+
+                        <p class="footer-tagline">
+                            Building clean, responsive and thoughtful web experiences.
+                        </p>
+
+                        <a href="contact.html" class="footer-button">Let's talk</a>
+                    </div>
+
+                    <nav class="footer-nav" aria-label="Footer navigation">
+                        <a href="about.html">About</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+
+                <div class="footer-middle">
+                    <div class="footer-status">
+                        <span class="footer-status-dot"></span>
+                        <span>Available for freelance and project-based work</span>
+                    </div>
+
+                    <form name="project-inquiry" method="POST" data-netlify="true" class="footer-form">
+                        <input type="hidden" name="form-name" value="project-inquiry" />
+
+                        <label class="footer-form-label" for="footer-email">
+                            Have a project in mind?
+                        </label>
+
+                        <div class="footer-form-row">
+                            <input id="footer-email" type="email" name="email" placeholder="Your email" required />
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+
+                <hr class="footer-divider" />
+
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 Leo Olsen. All rights reserved.</span>
+
+                    <div class="footer-socials">
+                        <a href="https://github.com/..." class="footer-social-btn" aria-label="GitHub">
+                            GitHub
+                        </a>
+
+                        <a href="https://linkedin.com/in/..." class="footer-social-btn" aria-label="LinkedIn">
+                            LinkedIn
+                        </a>
+
+                        <a href="mailto:leo@example.com" class="footer-social-btn" aria-label="Email">
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </main>
 
+
+    </main>
+    <div class="mobile-menu-backdrop" data-menu-backdrop>
+        <div class="mobile-menu">
+            <div class="mobile-menu-top">
+                <span class="mobile-menu-logo">Build. Deploy. Progress.</span>
+
+                <button class="mobile-menu-close" type="button" aria-label="Close menu" data-menu-close>
+                    ×
+                </button>
+            </div>
+
+            <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+                <a class="mobile-menu-link" href="/">
+                    Home
+                    <span></span>
+                </a>
+
+                <a class="mobile-menu-link" href="#about-me">
+                    About
+                    <span></span>
+                </a>
+
+                <a class="mobile-menu-link" href="#references-title">
+                    References
+                    <span></span>
+                </a>
+
+                <a class="mobile-menu-link" href="#footer-email">
+                    Contact
+                    <span></span>
+                </a>
+            </nav>
+
+            <div class="mobile-menu-bottom">
+                <p class="mobile-menu-text">
+                    Clean structure, sharp interfaces and fast deployment.
+                </p>
+
+                <a class="mobile-menu-cta" href="#footer-email">Let's Build</a>
+            </div>
+        </div>
+    </div>
+
     <script src="./src/js/main.js"></script>
-  </body>
+</body>
+
+</html>
+
+<script src="./src/js/main.js"></script>
+</body>
+
 </html>

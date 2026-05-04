@@ -97,3 +97,40 @@ window.addEventListener("scroll", () => {
 
   animateMarquee();
 })();
+
+/*MOBILE MENU*/
+const menuOpenBtn = document.querySelector("[data-menu-open]");
+const menuCloseBtn = document.querySelector("[data-menu-close]");
+const menuBackdrop = document.querySelector("[data-menu-backdrop]");
+const menuLinks = document.querySelectorAll(".mobile-menu-link");
+
+function openMobileMenu() {
+  menuBackdrop.classList.add("is-open");
+  document.body.classList.add("menu-lock");
+}
+
+function closeMobileMenu() {
+  menuBackdrop.classList.remove("is-open");
+  document.body.classList.remove("menu-lock");
+}
+
+if (menuOpenBtn && menuCloseBtn && menuBackdrop) {
+  menuOpenBtn.addEventListener("click", openMobileMenu);
+  menuCloseBtn.addEventListener("click", closeMobileMenu);
+
+  menuBackdrop.addEventListener("click", (event) => {
+    if (event.target === menuBackdrop) {
+      closeMobileMenu();
+    }
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  });
+}

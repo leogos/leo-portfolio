@@ -17,7 +17,6 @@
   box-sizing: border-box;
 }
 
-/* NAVBAR (asıl ortalama burada) */
 .navbar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -29,8 +28,8 @@
   background: #fff;
 
   width: 100%;
-  max-width: 1158px; /* ✅ ortalama için kritik */
-  margin: 0 auto; /* ✅ ortalar */
+  max-width: 1158px;
+  margin: 0 auto;
 }
 
 /* NAV ITEM */
