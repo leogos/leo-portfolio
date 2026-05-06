@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leo Olsen | Web Developer</title>
+
+    <style>
+      body.is-loading {
+        margin: 0;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .page-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: #ffffff;
+      }
+
+      .loader-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 42px);
+        gap: 14px;
+      }
+
+      .loader-grid span {
+        width: 42px;
+        height: 42px;
+        border: 12px solid currentColor;
+        border-radius: 12px;
+        background: transparent;
+        animation: loader-scale 1.1s ease-in-out infinite;
+      }
+
+      .loader-grid span:nth-child(1) {
+        color: #6c5ce7;
+        animation-delay: 0s;
+      }
+
+      .loader-grid span:nth-child(2) {
+        color: #00cec9;
+        animation-delay: 0.12s;
+      }
+
+      .loader-grid span:nth-child(3) {
+        color: #fd79a8;
+        animation-delay: 0.24s;
+      }
+
+      .loader-grid span:nth-child(4) {
+        color: #fdcb6e;
+        animation-delay: 0.36s;
+      }
+
+      .site-content {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      body.is-loaded .site-content {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 500ms ease;
+      }
+
+      body.is-loaded .page-loader {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 450ms ease,
+          visibility 450ms ease;
+      }
+
+      @keyframes loader-scale {
+        0%,
+        100% {
+          transform: scale(0.75);
+          opacity: 0.35;
+        }
+
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+
+  <body class="is-loading">
+    <div class="page-loader" id="page-loader">
+      <div class="loader-grid" aria-label="Page loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="site-content">
+      <header class="site-header">
+        <div class="container">
+          <nav class="navbar">
+            <a href="/" class="nav-item">
+              <span class="nav-icon">L</span>
+              <span class="nav-label">That Developer</span>
+            </a>
+
+            <button class="nav-item" data-menu-open aria-label="Open menu">
+              <span class="nav-icon">≡</span>
+              <span class="nav-label">Menu</span>
+            </button>
+
+            <button class="nav-item" data-contact-open>
+              <span class="nav-icon">O</span>
+              <span class="nav-label">Contact</span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="projects-page">
+          <div class="container">
+            <div class="projects-header">
+              <h1 class="projects-title">Projects</h1>
+              <p class="projects-text">
+                You can explore selected projects built for different
+                industries, goals, and digital use cases. Each project focuses
+                on clean structure, responsive layouts, and deployed web
+                experiences.
+              </p>
+            </div>
+
+            <div class="projects-list">
+              <div class="project-item">
+                <p class="project-eyebrow">PROJECT #1</p>
+
+                <article class="project-card">
+                  <img
+                    class="project-image"
+                    src="./src/img/webstudio.avif"
+                    srcset="
+                      ./src/img/webstudio.avif    1x,
+                      ./src/img/webstudio@2x.avif 2x
+                    "
+                    alt="Business website project preview"
+                    width="1000"
+                    height="1300"
+                  />
+
+                  <div class="project-content">
+                    <h3 class="project-name">WEBSTUDIO</h3>
+
+                    <p class="project-description">
+                      Responsive landing page built with semantic HTML and
+                      modern CSS layout techniques to create a clean and
+                      engaging web experience.
+                    </p>
+
+                    <p class="project-keywords">
+                      HTML · CSS · Responsive · GitHub · Figma
+                    </p>
+                  </div>
+                </article>
+
+                <div class="project-actions">
+                  <a
+                    class="project-button"
+                    href="https://leogos.github.io/webstudio-landing-page/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Visit Live Project
+                  </a>
+
+                  <a
+                    class="project-button"
+                    href="https://github.com/leogos/webstudio-landing-page"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    View GitHub Repository
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <p class="project-eyebrow">PROJECT #2</p>
+
+                <article class="project-card">
+                  <img
+                    class="project-image"
+                    src="./src/img/focus.avif"
+                    srcset="./src/img/focus.avif 1x, ./src/img/focus@2x.avif 2x"
+                    alt="Focus Frame project preview"
+                    width="1000"
+                    height="1300"
+                  />
+
+                  <div class="project-content">
+                    <h3 class="project-name">Focus Frame</h3>
+
+                    <p class="project-description">
+                      Team frontend project built with HTML and CSS. I
+                      contributed to About Us, Our Courses, Our Mentors and
+                      Reviews sections.
+                    </p>
+
+                    <p class="project-keywords">
+                      HTML · CSS · Trello · GitHub Deploy · Figma
+                    </p>
+                  </div>
+                </article>
+
+                <div class="project-actions">
+                  <a
+                    class="project-button"
+                    href="https://ulaskarakas.github.io/goit-html-css-project/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Visit Live Project
+                  </a>
+
+                  <a
+                    class="project-button"
+                    href="https://github.com/leogos/team-photography-landing-page"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    View Github Repository
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <p class="project-eyebrow">PROJECT #3</p>
+
+                <article class="project-card">
+                  <img
+                    class="project-image"
+                    src="./src/img/feelup.avif"
+                    srcset="
+                      ./src/img/feelup.avif    1x,
+                      ./src/img/feelup@2x.avif 2x
+                    "
+                    alt="FeelUp project preview"
+                    width="1120"
+                    height="720"
+                  />
+
+                  <div class="project-content">
+                    <h3 class="project-name">FeelUp</h3>
+
+                    <p class="project-description">
+                      Mood tracking web app built with HTML, CSS and JavaScript.
+                      Includes localStorage, weekly average tracking and dark
+                      mode.
+                    </p>
+
+                    <p class="project-keywords">
+                      HTML · CSS · Landing Page · GitHub Deploy
+                    </p>
+                  </div>
+                </article>
+
+                <div class="project-actions">
+                  <a
+                    class="project-button"
+                    href="https://leogos.github.io/feelup/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Visit Live Project
+                  </a>
+
+                  <a
+                    class="project-button"
+                    href="https://github.com/leogos/feelup"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    View GitHub Repository
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <p class="project-eyebrow">PROJECT #4</p>
+
+                <article class="project-card">
+                  <img
+                    class="project-image"
+                    src="./src/img/curiosify.avif"
+                    alt="Curiosify javascript project logo"
+                    srcset="
+                      ./src/img/curiosify.avif    1x,
+                      ./src/img/curiosify@2x.avif 2x
+                    "
+                    width="1000"
+                    height="1300"
+                  />
+
+                  <div class="project-content">
+                    <h3 class="project-name">Curiosify</h3>
+
+                    <p class="project-description">
+                      API-powered mini curiosity app built with HTML, CSS and
+                      JavaScript. Includes translation, favorites and
+                      localStorage support.
+                    </p>
+
+                    <p class="project-keywords">
+                      App · HTML · CSS · API · GitHub Deploy
+                    </p>
+                  </div>
+                </article>
+
+                <div class="project-actions">
+                  <a
+                    class="project-button"
+                    href="https://leogos.github.io/curiosify/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Visit Live Project
+                  </a>
+
+                  <a
+                    class="project-button"
+                    href="https://github.com/leogos/curiosify"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    View GitHub Repository
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="mobile-menu-backdrop" data-menu-backdrop>
+        <div class="mobile-menu">
+          <div class="mobile-menu-top">
+            <span class="mobile-menu-logo">Build. Deploy. Progress.</span>
+
+            <button
+              class="mobile-menu-close"
+              type="button"
+              aria-label="Close menu"
+              data-menu-close
+            >
+              ×
+            </button>
+          </div>
+
+          <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+            <a class="mobile-menu-link" href="/">
+              Home
+              <span></span>
+            </a>
+
+            <a class="mobile-menu-link" href="./index.html#about-me">
+              About
+              <span></span>
+            </a>
+
+            <a class="mobile-menu-link" href="./index.html#references-title">
+              References
+              <span></span>
+            </a>
+
+            <a class="mobile-menu-link" href="./contact.html">
+              Contact
+              <span></span>
+            </a>
+          </nav>
+
+          <div class="mobile-menu-bottom">
+            <p class="mobile-menu-text">
+              Clean structure, sharp interfaces and fast deployment.
+            </p>
+
+            <a class="mobile-menu-cta" href="./contact.html">Let's Build</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>

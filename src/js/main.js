@@ -1,66 +1,80 @@
+/* PAGE LOADER */
+window.addEventListener("load", () => {
+  document.body.classList.remove("is-loading");
+  document.body.classList.add("is-loaded");
+});
+
+/* HERO WORD ANIMATION */
 const words = ["Fast deploys", "Modern code", "Solid logic", "Sharp pages"];
 let current = 0;
 const container = document.getElementById("changing-word");
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-function scramble(nextWord, onDone) {
-  let iteration = 0;
-  const maxIterations = 12;
+if (container) {
+  function scramble(nextWord, onDone) {
+    let iteration = 0;
+    const maxIterations = 12;
 
-  container.innerHTML = nextWord
-    .split("")
-    .map((ch) => (ch === " " ? " " : `<span class="letter">${ch}</span>`))
-    .join("");
+    container.innerHTML = nextWord
+      .split("")
+      .map((ch) => (ch === " " ? " " : `<span class="letter">${ch}</span>`))
+      .join("");
 
-  const spans = container.querySelectorAll(".letter");
-  const targets = nextWord.split("").filter((c) => c !== " ");
+    const spans = container.querySelectorAll(".letter");
+    const targets = nextWord.split("").filter((c) => c !== " ");
 
-  const interval = setInterval(() => {
-    spans.forEach((span, i) => {
-      if (iteration >= maxIterations) {
-        span.textContent = targets[i];
-      } else {
-        span.textContent = chars[Math.floor(Math.random() * chars.length)];
+    const interval = setInterval(() => {
+      spans.forEach((span, i) => {
+        if (iteration >= maxIterations) {
+          span.textContent = targets[i];
+        } else {
+          span.textContent = chars[Math.floor(Math.random() * chars.length)];
+        }
+      });
+
+      iteration++;
+
+      if (iteration > maxIterations) {
+        clearInterval(interval);
+        onDone();
       }
+    }, 50);
+  }
+
+  function next() {
+    scramble(words[current], () => {
+      setTimeout(() => {
+        current = (current + 1) % words.length;
+        next();
+      }, 3000);
     });
+  }
 
-    iteration++;
-    if (iteration > maxIterations) {
-      clearInterval(interval);
-      onDone();
-    }
-  }, 50);
+  next();
 }
 
-function next() {
-  scramble(words[current], () => {
-    setTimeout(() => {
-      current = (current + 1) % words.length;
-      next();
-    }, 3000);
-  });
-}
-
-next();
-
-/*NAVBAR*/
+/* NAVBAR */
 let lastScroll = 0;
 const navbar = document.querySelector(".site-header");
 
-window.addEventListener("scroll", () => {
-  const current = window.scrollY;
-  const diff = lastScroll - current;
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const scrollDifference = lastScroll - currentScroll;
 
-  if (current > lastScroll) {
-    navbar.style.transform = "translateY(-100%)"; // aşağı → gizle
-  } else if (diff > 10) {
-    navbar.style.transform = "translateY(0)"; // 10px yukarı çıkınca → göster
-  }
+    if (currentScroll <= 20) {
+      navbar.classList.remove("is-hidden");
+    } else if (currentScroll > lastScroll) {
+      navbar.classList.add("is-hidden");
+    } else if (scrollDifference > 6) {
+      navbar.classList.remove("is-hidden");
+    }
 
-  lastScroll = current;
-});
+    lastScroll = currentScroll;
+  });
+}
 
-/*AD MARQUEE*/
+/* AD MARQUEE */
 (() => {
   const track = document.getElementById("ad-marquee-track");
 
@@ -68,16 +82,16 @@ window.addEventListener("scroll", () => {
 
   track.innerHTML = `
     <span class="ad-marquee-item">
-    Empower your brand with <strong>digital strength!</strong>
+      Empower your brand with <strong>digital strength!</strong>
     </span>
     <span class="ad-marquee-item">
-    Empower your brand with <strong>digital strength!</strong>
+      Empower your brand with <strong>digital strength!</strong>
     </span>
     <span class="ad-marquee-item">
-    Empower your brand with <strong>digital strength!</strong>
+      Empower your brand with <strong>digital strength!</strong>
     </span>
     <span class="ad-marquee-item">
-    Empower your brand with <strong>digital strength!</strong>
+      Empower your brand with <strong>digital strength!</strong>
     </span>
   `;
 
@@ -98,18 +112,22 @@ window.addEventListener("scroll", () => {
   animateMarquee();
 })();
 
-/*MOBILE MENU*/
+/* MOBILE MENU */
 const menuOpenBtn = document.querySelector("[data-menu-open]");
 const menuCloseBtn = document.querySelector("[data-menu-close]");
 const menuBackdrop = document.querySelector("[data-menu-backdrop]");
 const menuLinks = document.querySelectorAll(".mobile-menu-link");
 
 function openMobileMenu() {
+  if (!menuBackdrop) return;
+
   menuBackdrop.classList.add("is-open");
   document.body.classList.add("menu-lock");
 }
 
 function closeMobileMenu() {
+  if (!menuBackdrop) return;
+
   menuBackdrop.classList.remove("is-open");
   document.body.classList.remove("menu-lock");
 }
@@ -134,8 +152,3 @@ if (menuOpenBtn && menuCloseBtn && menuBackdrop) {
     }
   });
 }
-
-window.addEventListener("load", () => {
-  document.body.classList.remove("is-loading");
-  document.body.classList.add("is-loaded");
-});

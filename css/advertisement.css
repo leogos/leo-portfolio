@@ -17,7 +17,7 @@
 .ad-marquee-item {
   flex-shrink: 0;
   padding-right: 24px;
-  font-size: clamp(38px, 8vw, 112px);
+  font-size: 36px;
   font-weight: 500;
   white-space: nowrap;
   color: #111;
@@ -35,6 +35,8 @@
 
   .ad-marquee-item {
     padding-right: 72px;
+    font-size: 42px;
+    letter-spacing: 1.4px;
   }
 }
 

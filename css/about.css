@@ -23,7 +23,7 @@
 
 .about-me-eyebrow {
   margin: 0 0 14px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -32,7 +32,7 @@
 
 .about-me-title {
   margin: 0;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 0.9;
 }
 
@@ -115,9 +115,9 @@
 
 .about-card-title {
   margin: 24px 0 18px;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1;
-  letter-spacing: -0.05em;
+  font-weight: 500;
 }
 
 .about-card-body {
@@ -144,7 +144,7 @@
 }
 
 .timeline-item span {
-  font-weight: 800;
+  font-weight: 500;
   color: #111;
 }
 
@@ -226,7 +226,6 @@
   background: #fafafa;
   color: #333;
   font-size: 14px;
-  font-weight: 600;
 }
 
 .about-card-personal {
@@ -275,7 +274,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 44px;
   padding: 12px 18px;
 
@@ -331,11 +329,11 @@
   }
 
   .about-me-title {
-    font-size: 42px;
+    font-size: 36px;
   }
 
   .about-me-text {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .about-card {
@@ -345,11 +343,11 @@
 
   .about-card-title {
     margin-top: 36px;
-    font-size: 44px;
+    font-size: 36px;
   }
 
   .about-card-body {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .timeline-list {
@@ -358,7 +356,7 @@
   }
 
   .timeline-item {
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 120px 1fr;
     gap: 20px;
     padding-top: 18px;
   }
@@ -371,11 +369,20 @@
 
   .principle-list li {
     padding: 18px;
+    font-size: 20px;
   }
 
   .stack-grid {
-    gap: 18px;
+    gap: 0px;
     margin-top: 28px;
+  }
+
+  .stack-grid h4 {
+    font-size: 20px;
+  }
+
+  .stack-grid p {
+    font-size: 20px;
   }
 
   .stack-grid div {
@@ -389,7 +396,23 @@
 
   .hobby-list span {
     padding: 12px 16px;
+    font-size: 20px;
+  }
+
+  .about-me-eyebrow {
     font-size: 16px;
+  }
+
+  .timeline-item span {
+    font-size: 20px;
+  }
+
+  .timeline-item p {
+    font-size: 20px;
+  }
+
+  .about-card-cta-button {
+    font-size: 18px;
   }
 }
 
@@ -400,7 +423,7 @@
     --about-card-gap: 120px;
     --about-card-end-space: 560px;
 
-    padding: 80px 0;
+    padding: 80px 0 0 0;
   }
 
   .about-me-container {
@@ -423,5 +446,11 @@
 
   .stack-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 300px 1fr;
   }
 }
