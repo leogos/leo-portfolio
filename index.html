@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leo Olsen | Web Developer</title>
+    <title>Leo Olsen | Fullstack Developer</title>
 
     <style>
       body.is-loading {
@@ -129,7 +129,7 @@
 
       <main class="main">
         <div class="container">
-          <section class="hero">
+          <section class="hero" id="hero">
             <img
               src="./src/img/pp.avif"
               alt="Leo Olsen's profile picture"
@@ -142,14 +142,20 @@
               <br />by <span class="leo">Leo Olsen</span>.
             </h1>
             <div class="hero-buttons">
-              <button class="hero-btn">Explore Projects</button>
+              <button class="hero-btn">
+                <a href="projects.html">Explore Projects</a>
+              </button>
               <button class="hero-btn">Contact Me</button>
             </div>
             <p><span class="hero-dot">.</span> Available for new projects</p>
           </section>
         </div>
 
-        <section class="ad-marquee" aria-label="Brand statement">
+        <section
+          class="ad-marquee"
+          id="advertisement"
+          aria-label="Brand statement"
+        >
           <div class="container">
             <div class="ad-marquee-viewport">
               <div class="ad-marquee-track" id="ad-marquee-track">
@@ -161,7 +167,7 @@
           </div>
         </section>
 
-        <section class="about-me" id="about-me">
+        <section class="about-me" id="about">
           <div class="about-me-container">
             <div class="about-me-header">
               <p class="about-me-eyebrow">About Me</p>
@@ -299,7 +305,7 @@
           </div>
         </section>
 
-        <section class="previews-section previews-projects">
+        <section class="previews-section previews-projects" id="projects">
           <div class="container">
             <div class="previews-content">
               <span class="previews-label">PROJECTS</span>
@@ -336,6 +342,7 @@
         <div class="container">
           <section
             class="references-section"
+            id="references"
             aria-labelledby="references-title"
           >
             <div class="references-content">
@@ -354,8 +361,6 @@
               aria-label="Customer and project references"
             >
               <div class="references-track">
-            
-
                 <img
                   src="./src/img/mtm.avif"
                   srcset="./src/img/mtm.avif 1x, ./src/img/mtm@2x.avif 2x"
@@ -496,87 +501,90 @@
 
         <div class="container">
           <footer class="footer">
-            <div class="footer-top">
-              <div class="footer-brand">
-                <span class="footer-logo">Leo Olsen</span>
+            <div class="footer-grid">
+              <div class="footer-card footer-cta">
+                <div>
+                  <p class="footer-eyebrow">Ready to build?</p>
+                  <h2 class="footer-title">
+                    Let's turn your idea into a live web experience.
+                  </h2>
+                </div>
+
+                <a class="footer-button" href="./contact.html">
+                  Start a Project
+                  <svg class="footer-button-icon" width="20" height="20">
+                    <use href="./src/img/icons.svg#icon-example"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="footer-card footer-brand">
+                <a class="footer-logo" href="./index.html">{leOlsen}</a>
 
                 <p class="footer-tagline">
-                  Building clean, responsive and thoughtful web experiences.
+                  Clean structure, responsive layouts and thoughtful web
+                  experiences built for modern brands.
                 </p>
-
-                <a href="contact.html" class="footer-button">Let's talk</a>
               </div>
 
-              <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-              </nav>
-            </div>
+              <div class="footer-card footer-links-card">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                  <a href="./index.html">Home</a>
+                  <a href="./index.html#about-me">About</a>
+                  <a href="./projects.html">Projects</a>
+                  <a href="./index.html#references-title">References</a>
+                  <a href="./contact.html">Contact</a>
+                </nav>
 
-            <div class="footer-middle">
-              <div class="footer-status">
-                <span class="footer-status-dot"></span>
-                <span>Available for freelance and project-based work</span>
-              </div>
+                <div class="footer-meta">
+                  <span>© 2026 Leo Olsen. All rights reserved.</span>
 
-              <form
-                name="project-inquiry"
-                method="POST"
-                data-netlify="true"
-                class="footer-form"
-              >
-                <input type="hidden" name="form-name" value="project-inquiry" />
-
-                <label class="footer-form-label" for="footer-email">
-                  Have a project in mind?
-                </label>
-
-                <div class="footer-form-row">
-                  <input
-                    id="footer-email"
-                    type="email"
-                    name="email"
-                    placeholder="Your email"
-                    required
-                  />
-                  <button type="submit">Send</button>
+                  <div class="footer-legal">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                  </div>
                 </div>
-              </form>
-            </div>
-
-            <hr class="footer-divider" />
-
-            <div class="footer-bottom">
-              <span class="footer-copy"
-                >© 2026 Leo Olsen. All rights reserved.</span
-              >
-
-              <div class="footer-socials">
-                <a
-                  href="https://github.com/..."
-                  class="footer-social-btn"
-                  aria-label="GitHub"
-                >
-                  GitHub
-                </a>
-
-                <a
-                  href="https://linkedin.com/in/..."
-                  class="footer-social-btn"
-                  aria-label="LinkedIn"
-                >
-                  LinkedIn
-                </a>
-
-                <a
-                  href="mailto:leo@example.com"
-                  class="footer-social-btn"
-                  aria-label="Email"
-                >
-                  Email
-                </a>
               </div>
+
+              <a
+                class="footer-card footer-social-card"
+                href="https://github.com/leogos" target="_blank" aria-label="Github"
+                aria-label="Github"
+              >
+                <svg class="footer-social-icon" width="48" height="48">
+                  <use href="./src/icons/icons.svg#icon-github"></use>
+                </svg>
+              </a>
+
+              <a
+                class="footer-card footer-social-card"
+                href="#"
+                aria-label="LinkedIn"
+              >
+                <svg class="footer-social-icon" width="48" height="48">
+                  <use href="./src/icons/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+
+              <a
+                class="footer-card footer-social-card"
+                href="#"
+                aria-label="Twitter"
+              >
+                <svg class="footer-social-icon" width="48" height="48">
+                  <use href="./src/icons/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+
+              <a
+                class="footer-card footer-social-card"
+                href="https://instagram.com/olsenaleo" target="_blank"
+                aria-label="Instagram"
+              >
+                <svg class="footer-social-icon" width="48" height="48">
+                  <use href="./src/icons/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </div>
           </footer>
         </div>
@@ -603,17 +611,22 @@
               <span></span>
             </a>
 
-            <a class="mobile-menu-link" href="#about-me">
+            <a class="mobile-menu-link" href="#about">
               About
               <span></span>
             </a>
 
-            <a class="mobile-menu-link" href="#references-title">
+            <a class="mobile-menu-link" href="#references">
               References
               <span></span>
             </a>
 
-            <a class="mobile-menu-link" href="#footer-email">
+            <a class="mobile-menu-link" href="./projects.html">
+              Projects
+              <span></span>
+            </a>
+
+            <a class="mobile-menu-link" href="./contact.html">
               Contact
               <span></span>
             </a>
@@ -624,7 +637,7 @@
               Clean structure, sharp interfaces and fast deployment.
             </p>
 
-            <a class="mobile-menu-cta" href="#footer-email">Let's Build</a>
+            <a class="mobile-menu-cta" href="./contact.html">Let's Build</a>
           </div>
         </div>
       </div>

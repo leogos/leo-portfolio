@@ -1,248 +1,305 @@
 .footer {
-  border: 1px solid rgba(17, 17, 17, 0.12);
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.footer-card {
+  border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 24px;
-  padding: 28px 24px 20px;
   background:
     radial-gradient(
       circle at top left,
       rgba(77, 90, 229, 0.1),
-      transparent 32%
+      transparent 34%
     ),
     linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
 }
 
-.footer-top {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-bottom: 28px;
-}
-
-.footer-brand {
+.footer-cta {
+  grid-column: 1 / -1;
+  min-height: 240px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
 }
 
-.footer-logo {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  color: #111;
+.footer-eyebrow {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4d5ae5;
 }
 
-.footer-tagline {
-  max-width: 320px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(17, 17, 17, 0.64);
-  margin: 12px 0 16px;
+.footer-title {
+  max-width: 680px;
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.08;
+  font-weight: 700;
+  color: #111827;
 }
 
 .footer-button {
+  width: fit-content;
+  min-height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
+  gap: 12px;
+  padding: 0 22px;
+  border-radius: 14px;
   background-color: #4d5ae5;
-  border-radius: 999px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
   text-decoration: none;
+  box-shadow: 0 14px 28px rgba(77, 90, 229, 0.28);
   transition:
-    background-color 160ms ease,
-    transform 160ms ease;
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .footer-button:hover {
-  background-color: #3b46b1;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  background-color: #3f4acb;
+  box-shadow: 0 18px 34px rgba(77, 90, 229, 0.34);
+}
+
+.footer-button-icon {
+  fill: currentColor;
+}
+
+.footer-brand {
+  grid-column: 1 / -1;
+  min-height: 300px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #315be8;
+}
+
+.footer-logo {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-tagline {
+  max-width: 420px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.footer-links-card {
+  grid-column: 1 / -1;
+  min-height: 300px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 18px 26px;
 }
 
 .footer-nav a {
-  font-size: 14px;
-  font-weight: 500;
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
   text-decoration: none;
-  color: rgba(17, 17, 17, 0.72);
+  text-transform: uppercase;
   transition:
-    color 160ms ease,
-    opacity 160ms ease;
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .footer-nav a:hover {
   color: #4d5ae5;
-}
-
-.footer-middle {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
-  margin-bottom: 24px;
-  border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(17, 17, 17, 0.08);
-}
-
-.footer-status {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  color: rgba(17, 17, 17, 0.68);
-}
-
-.footer-status-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.12);
-}
-
-.footer-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-form-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #111;
-}
-
-.footer-form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-form-row input {
-  width: 100%;
-  min-height: 44px;
-  padding: 0 14px;
-  border: 1px solid rgba(17, 17, 17, 0.14);
-  border-radius: 999px;
-  background-color: #fff;
-  color: #111;
-  outline: none;
-}
-
-.footer-form-row input:focus {
-  border-color: #4d5ae5;
-}
-
-.footer-form-row button {
-  min-height: 44px;
-  padding: 0 18px;
-  border: none;
-  border-radius: 999px;
-  background-color: #111;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    transform 160ms ease,
-    opacity 160ms ease;
-}
-
-.footer-form-row button:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
 }
 
-.footer-divider {
-  border: none;
-  border-top: 1px solid rgba(17, 17, 17, 0.1);
-  margin: 0 0 16px;
-}
-
-.footer-bottom {
+.footer-meta {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.footer-copy {
-  font-size: 12px;
-  color: rgba(17, 17, 17, 0.45);
-  letter-spacing: 0.03em;
+.footer-meta span {
+  color: rgba(17, 17, 17, 0.48);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-.footer-socials {
+.footer-legal {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 18px;
 }
 
-.footer-social-btn {
+.footer-legal a {
+  color: #111827;
   font-size: 13px;
-  font-weight: 500;
-  color: rgba(17, 17, 17, 0.7);
+  line-height: 1.2;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.footer-legal a:hover {
+  color: #4d5ae5;
+}
+
+.footer-social-card {
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  color: #315be8;
   text-decoration: none;
   transition:
-    color 160ms ease,
-    transform 160ms ease;
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.footer-social-btn:hover {
-  color: #4d5ae5;
-  transform: translateY(-2px);
+.footer-social-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 90, 229, 0.24);
+  box-shadow: 0 22px 44px rgba(17, 17, 17, 0.08);
+}
+
+.footer-social-icon {
+  fill: currentColor;
 }
 
 @media (min-width: 768px) {
   .footer {
-    padding: 36px 32px 24px;
+    padding: 56px 0;
   }
 
-  .footer-top {
-    grid-template-columns: 1.4fr 1fr;
-    align-items: start;
+  .footer-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+  }
+
+  .footer-cta {
+    grid-column: 1 / -1;
+    min-height: 180px;
+    padding: 32px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-title {
+    font-size: 40px;
+  }
+
+  .footer-brand {
+    grid-column: span 3;
+    min-height: 320px;
+    padding: 32px;
+  }
+
+  .footer-links-card {
+    grid-column: span 3;
+    min-height: 320px;
+    padding: 32px;
   }
 
   .footer-nav {
-    justify-content: flex-end;
+    gap: 20px 30px;
   }
 
-  .footer-middle {
-    grid-template-columns: 1fr 1.4fr;
-    align-items: center;
+  .footer-social-card {
+    grid-column: span 3;
+    min-height: 170px;
   }
 
-  .footer-form-row {
+  .footer-meta {
     flex-direction: row;
-  }
-
-  .footer-form-row button {
-    flex-shrink: 0;
-  }
-
-  .footer-bottom {
-    flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+    gap: 24px;
+  }
+
+  .footer-legal {
+    justify-content: flex-end;
   }
 }
 
 @media (min-width: 1158px) {
   .footer {
-    padding: 40px 40px 28px;
+    padding: 72px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  .footer-cta {
+    grid-column: 1 / -1;
+    min-height: 118px;
+    padding: 28px 36px;
+  }
+
+  .footer-title {
+    max-width: 760px;
+    font-size: 30px;
+  }
+
+  .footer-brand {
+    grid-column: span 5;
+    min-height: 320px;
+    padding: 36px;
   }
 
   .footer-logo {
-    font-size: 28px;
+    font-size: 56px;
   }
 
-  .footer-tagline {
-    font-size: 15px;
+  .footer-links-card {
+    grid-column: span 7;
+    min-height: 320px;
+    padding: 36px;
+  }
+
+  .footer-nav {
+    gap: 22px 34px;
+  }
+
+  .footer-nav a {
+    font-size: 16px;
+  }
+
+  .footer-social-card {
+    grid-column: span 3;
+    min-height: 130px;
   }
 }
