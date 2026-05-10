@@ -108,21 +108,48 @@
     <div class="site-content">
       <header class="site-header">
         <div class="container">
-          <nav class="navbar">
-            <a href="/" class="nav-item">
-              <span class="nav-icon">L</span>
-              <span class="nav-label">That Developer</span>
-            </a>
+          <nav class="navbar" aria-label="Primary navigation">
+            <div class="mobile-navbar">
+              <a href="/" class="nav-item">
+                <span class="nav-icon">L</span>
+                <span class="nav-label">That Developer</span>
+              </a>
 
-            <button class="nav-item" data-menu-open aria-label="Open menu">
-              <span class="nav-icon">≡</span>
-              <span class="nav-label">Menu</span>
-            </button>
+              <button class="nav-item" data-menu-open aria-label="Open menu">
+                <span class="nav-icon">
+                  <svg
+                    class="nav-svg"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use href="./src/icons/icons.svg#icon-burger"></use>
+                  </svg>
+                </span>
+                <span class="nav-label">Menu</span>
+              </button>
 
-            <button class="nav-item" data-contact-open>
-              <span class="nav-icon">O</span>
-              <span class="nav-label">Contact</span>
-            </button>
+              <a href="./contact.html" class="nav-item">
+                <span class="nav-icon">O</span>
+                <span class="nav-label">Contact</span>
+              </a>
+            </div>
+
+            <div class="desktop-navbar">
+              <a class="desktop-logo" href="./index.html">{leOlsen}</a>
+
+              <div class="desktop-nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./index.html#about">About</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./index.html#references">References</a>
+                <a href="./contact.html">Contact</a>
+              </div>
+
+              <a class="desktop-nav-button" href="./contact.html"
+                >Start a Project</a
+              >
+            </div>
           </nav>
         </div>
       </header>
@@ -145,7 +172,9 @@
               <button class="hero-btn">
                 <a href="projects.html">Explore Projects</a>
               </button>
-              <button class="hero-btn">Contact Me</button>
+              <button class="hero-btn">
+                <a href="contact.html">Contact Me</a>
+              </button>
             </div>
             <p><span class="hero-dot">.</span> Available for new projects</p>
           </section>
@@ -297,7 +326,7 @@
                   <p class="about-card-cta-text">Ready?</p>
 
                   <button class="about-card-cta-button" type="button">
-                    Let's Build Together
+                    <a href="./projects.html">Explore Projects</a>
                   </button>
                 </div>
               </article>
@@ -461,7 +490,9 @@
               </div>
             </div>
 
-            <a href="#contact" class="references-cta">Start Your Web Project</a>
+            <a href="./contact.html" class="references-cta"
+              >Start Your Web Project</a
+            >
           </section>
         </div>
 
@@ -491,9 +522,7 @@
                   product and turn the idea into an unique web experience.
                 </p>
 
-                <a class="previews-button" href="./contact.html">
-                  Let's Build Together
-                </a>
+                <a class="previews-button" href="./contact.html"> Reach Me </a>
               </div>
             </div>
           </div>
@@ -504,7 +533,7 @@
             <div class="footer-grid">
               <div class="footer-card footer-cta">
                 <div>
-                  <p class="footer-eyebrow">Ready to build?</p>
+                  <p class="footer-eyebrow">Idea → Reality</p>
                   <h2 class="footer-title">
                     Let's turn your idea into a live web experience.
                   </h2>
@@ -513,7 +542,7 @@
                 <a class="footer-button" href="./contact.html">
                   Start a Project
                   <svg class="footer-button-icon" width="20" height="20">
-                    <use href="./src/img/icons.svg#icon-example"></use>
+                    <use href="./src/icons/icons.svg#icon-rocket"></use>
                   </svg>
                 </a>
               </div>
@@ -530,9 +559,9 @@
               <div class="footer-card footer-links-card">
                 <nav class="footer-nav" aria-label="Footer navigation">
                   <a href="./index.html">Home</a>
-                  <a href="./index.html#about-me">About</a>
+                  <a href="./index.html#about">About</a>
                   <a href="./projects.html">Projects</a>
-                  <a href="./index.html#references-title">References</a>
+                  <a href="./index.html#references">References</a>
                   <a href="./contact.html">Contact</a>
                 </nav>
 
@@ -548,7 +577,9 @@
 
               <a
                 class="footer-card footer-social-card"
-                href="https://github.com/leogos" target="_blank" aria-label="Github"
+                href="https://github.com/leogos"
+                target="_blank"
+                aria-label="Github"
                 aria-label="Github"
               >
                 <svg class="footer-social-icon" width="48" height="48">
@@ -578,7 +609,8 @@
 
               <a
                 class="footer-card footer-social-card"
-                href="https://instagram.com/olsenaleo" target="_blank"
+                href="https://instagram.com/olsenaleo"
+                target="_blank"
                 aria-label="Instagram"
               >
                 <svg class="footer-social-icon" width="48" height="48">

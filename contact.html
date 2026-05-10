@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leo Olsen | Projects | Fullstack Developer</title>
+    <title>Leo Olsen | Contact | Fullstack Developer</title>
 
     <style>
       body.is-loading {
@@ -146,232 +146,199 @@
                 <a href="./contact.html">Contact</a>
               </div>
 
-              <a class="desktop-nav-button" href="./contact.html"
-                >Start a Project</a
-              >
+              <a class="desktop-nav-button" href="./contact.html">
+                Start a Project
+              </a>
             </div>
           </nav>
         </div>
       </header>
 
       <main class="main">
-        <section class="projects-page">
+        <section class="contact-page">
           <div class="container">
-            <div class="projects-header">
-              <h1 class="projects-title">Projects</h1>
-              <p class="projects-text">
-                You can explore selected projects built for different
-                industries, goals, and digital use cases. Each project focuses
-                on clean structure, responsive layouts, and deployed web
-                experiences.
+            <div class="contact-header">
+              <h1 class="contact-title">Contact</h1>
+
+              <p class="contact-text">
+                Share your project idea, website goal, or business need. I'll
+                help turn it into a clean, responsive, and reliable web
+                experience.
               </p>
             </div>
 
-            <div class="projects-list">
-              <div class="project-item">
-                <p class="project-eyebrow">PROJECT #1</p>
+            <div class="contact-grid">
+              <div class="contact-content">
+                <h2 class="contact-subtitle">Create the Special Project</h2>
 
-                <article class="project-card">
-                  <img
-                    class="project-image"
-                    src="./src/img/webstudio.avif"
-                    srcset="
-                      ./src/img/webstudio.avif    1x,
-                      ./src/img/webstudio@2x.avif 2x
-                    "
-                    alt="Business website project preview"
-                    width="1000"
-                    height="1300"
-                  />
+                <p class="contact-text">
+                  Whether you need a landing page, portfolio, business website,
+                  or a focused web interface, you can send the details through
+                  the form.
+                </p>
 
-                  <div class="project-content">
-                    <h3 class="project-name">WEBSTUDIO</h3>
+                <p class="contact-text contact-info">
+                  Phone:
+                  <a href="tel:+905555555555">+90 555 555 55 55</a>
+                </p>
 
-                    <p class="project-description">
-                      Responsive landing page built with semantic HTML and
-                      modern CSS layout techniques to create a clean and
-                      engaging web experience.
-                    </p>
+                <p class="contact-text contact-info">
+                  Email:
+                  <a href="mailto:hello@leoolsen.com">hello@leoolsen.com</a>
+                </p>
 
-                    <p class="project-keywords">
-                      HTML · CSS · Responsive · GitHub · Figma
-                    </p>
-                  </div>
-                </article>
-
-                <div class="project-actions">
-                  <a
-                    class="project-button"
-                    href="https://leogos.github.io/webstudio-landing-page/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Visit Live Project
-                  </a>
-
-                  <a
-                    class="project-button"
-                    href="https://github.com/leogos/webstudio-landing-page"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    View GitHub Repository
-                  </a>
-                </div>
+                <a
+                  class="whatsapp-button"
+                  href="href"
+                  ="https://wa.me/905555555555?text=Merhaba%2C%20yaz%C4%B1l%C4%B1m%20hakk%C4%B1nda%20size%20dan%C4%B1%C5%9Fmak%20istiyorum."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="whatsapp-button-icon" width="20" height="20">
+                    <use href="./src/icons/icons.svg#icon-whatsapp"></use>
+                  </svg>
+                  Contact on WhatsApp
+                </a>
               </div>
 
-              <div class="project-item">
-                <p class="project-eyebrow">PROJECT #2</p>
+              <form
+                class="contact-form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                novalidate
+              >
+                <input type="hidden" name="form-name" value="contact" />
 
-                <article class="project-card">
-                  <img
-                    class="project-image"
-                    src="./src/img/focus.avif"
-                    srcset="./src/img/focus.avif 1x, ./src/img/focus@2x.avif 2x"
-                    alt="Focus Frame project preview"
-                    width="1000"
-                    height="1300"
-                  />
+                <p class="hidden-field">
+                  <label>
+                    Don't fill this out if you're human:
+                    <input
+                      type="text"
+                      name="bot-field"
+                      tabindex="-1"
+                      autocomplete="off"
+                    />
+                  </label>
+                </p>
 
-                  <div class="project-content">
-                    <h3 class="project-name">Focus Frame</h3>
+                <div class="form-field">
+                  <label class="form-label" for="full-name">Full Name</label>
 
-                    <p class="project-description">
-                      Team frontend project built with HTML and CSS. I
-                      contributed to About Us, Our Courses, Our Mentors and
-                      Reviews sections.
-                    </p>
+                  <div class="input-wrap">
+                    <svg
+                      class="input-icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use href="./src/icons/icons.svg#icon-name"></use>
+                    </svg>
 
-                    <p class="project-keywords">
-                      HTML · CSS · Trello · GitHub Deploy · Figma
-                    </p>
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="full-name"
+                      name="full-name"
+                      placeholder="Your full name"
+                      autocomplete="name"
+                      required
+                    />
                   </div>
-                </article>
 
-                <div class="project-actions">
-                  <a
-                    class="project-button"
-                    href="https://ulaskarakas.github.io/goit-html-css-project/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Visit Live Project
-                  </a>
-
-                  <a
-                    class="project-button"
-                    href="https://github.com/leogos/team-photography-landing-page"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    View Github Repository
-                  </a>
+                  <span class="form-error"></span>
                 </div>
-              </div>
 
-              <div class="project-item">
-                <p class="project-eyebrow">PROJECT #3</p>
+                <div class="form-field">
+                  <label class="form-label" for="email">Email</label>
 
-                <article class="project-card">
-                  <img
-                    class="project-image"
-                    src="./src/img/feelup.avif"
-                    srcset="
-                      ./src/img/feelup.avif    1x,
-                      ./src/img/feelup@2x.avif 2x
-                    "
-                    alt="FeelUp project preview"
-                    width="1120"
-                    height="720"
-                  />
+                  <div class="input-wrap">
+                    <svg
+                      class="input-icon"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                    >
+                      <use href="./src/icons/icons.svg#icon-mail"></use>
+                    </svg>
 
-                  <div class="project-content">
-                    <h3 class="project-name">FeelUp</h3>
-
-                    <p class="project-description">
-                      Mood tracking web app built with HTML, CSS and JavaScript.
-                      Includes localStorage, weekly average tracking and dark
-                      mode.
-                    </p>
-
-                    <p class="project-keywords">
-                      HTML · CSS · JavaScript · GitHub Deploy
-                    </p>
+                    <input
+                      class="form-input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="your@email.com"
+                      autocomplete="email"
+                      inputmode="email"
+                      required
+                    />
                   </div>
-                </article>
 
-                <div class="project-actions">
-                  <a
-                    class="project-button"
-                    href="https://leogos.github.io/feelup/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Visit Live Project
-                  </a>
-
-                  <a
-                    class="project-button"
-                    href="https://github.com/leogos/feelup"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    View GitHub Repository
-                  </a>
+                  <span class="form-error"></span>
                 </div>
-              </div>
 
-              <div class="project-item">
-                <p class="project-eyebrow">PROJECT #4</p>
+                <div class="form-field">
+                  <label class="form-label" for="phone">Phone</label>
 
-                <article class="project-card">
-                  <img
-                    class="project-image"
-                    src="./src/img/curiosify.avif"
-                    alt="Curiosify javascript project logo"
-                    srcset="
-                      ./src/img/curiosify.avif    1x,
-                      ./src/img/curiosify@2x.avif 2x
-                    "
-                    width="1000"
-                    height="1300"
-                  />
+                  <div class="input-wrap">
+                    <svg
+                      class="input-icon"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                    >
+                      <use href="./src/icons/icons.svg#icon-phone"></use>
+                    </svg>
 
-                  <div class="project-content">
-                    <h3 class="project-name">Curiosify</h3>
-
-                    <p class="project-description">
-                      API-powered mini curiosity app built with HTML, CSS and
-                      JavaScript. Includes translation, favorites and
-                      localStorage support.
-                    </p>
-
-                    <p class="project-keywords">
-                      App · HTML · CSS · JavaScript · API · GitHub Deploy
-                    </p>
+                    <input
+                      class="form-input"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Your phone number"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      pattern="[0-9+\s()-]{8,}"
+                      required
+                    />
                   </div>
-                </article>
 
-                <div class="project-actions">
-                  <a
-                    class="project-button"
-                    href="https://leogos.github.io/curiosify/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Visit Live Project
-                  </a>
-
-                  <a
-                    class="project-button"
-                    href="https://github.com/leogos/curiosify"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    View GitHub Repository
-                  </a>
+                  <span class="form-error"></span>
                 </div>
-              </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="message">Message</label>
+
+                  <div class="input-wrap input-wrap-textarea">
+                    <textarea
+                      class="form-input form-textarea"
+                      id="message"
+                      name="message"
+                      placeholder="Tell me about your project"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <span class="form-error"></span>
+                </div>
+
+                <label class="privacy-check">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    value="accepted"
+                    required
+                  />
+                  <span>I accept the data privacy policy.</span>
+                </label>
+
+                <span class="form-error privacy-error"></span>
+
+                <button class="form-button" type="submit">Send Message</button>
+              </form>
             </div>
           </div>
         </section>
@@ -427,7 +394,7 @@
                 class="footer-card footer-social-card"
                 href="https://github.com/leogos"
                 target="_blank"
-                aria-label="Github"
+                rel="noopener"
                 aria-label="Github"
               >
                 <svg class="footer-social-icon" width="48" height="48">
@@ -459,6 +426,7 @@
                 class="footer-card footer-social-card"
                 href="https://instagram.com/olsenaleo"
                 target="_blank"
+                rel="noopener"
                 aria-label="Instagram"
               >
                 <svg class="footer-social-icon" width="48" height="48">
@@ -493,6 +461,11 @@
 
             <a class="mobile-menu-link" href="./index.html#about-me">
               About
+              <span></span>
+            </a>
+
+            <a class="mobile-menu-link" href="./projects.html">
+              Projects
               <span></span>
             </a>
 

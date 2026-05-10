@@ -152,3 +152,101 @@ if (menuOpenBtn && menuCloseBtn && menuBackdrop) {
     }
   });
 }
+
+/* CONTACT FORM */
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  const fullName = contactForm.querySelector("#full-name");
+  const email = contactForm.querySelector("#email");
+  const phone = contactForm.querySelector("#phone");
+  const message = contactForm.querySelector("#message");
+  const privacy = contactForm.querySelector("#privacy");
+  const botField = contactForm.querySelector('[name="bot-field"]');
+  const privacyError = contactForm.querySelector(".privacy-error");
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const setError = (input, message) => {
+    const field = input.closest(".form-field");
+    const error = field.querySelector(".form-error");
+
+    field.classList.add("is-error");
+    error.textContent = message;
+  };
+
+  const clearError = (input) => {
+    const field = input.closest(".form-field");
+    const error = field.querySelector(".form-error");
+
+    field.classList.remove("is-error");
+    error.textContent = "";
+  };
+
+  const validateInput = (input) => {
+    const value = input.value.trim();
+
+    if (value === "") {
+      setError(input, "This field is required.");
+      return false;
+    }
+
+    if (input.type === "email" && !emailPattern.test(value)) {
+      setError(input, "Please enter a valid email address.");
+      return false;
+    }
+
+    clearError(input);
+    return true;
+  };
+
+  const validatePrivacy = () => {
+    if (!privacy.checked) {
+      privacyError.textContent = "Please accept the data privacy policy.";
+      return false;
+    }
+
+    privacyError.textContent = "";
+    return true;
+  };
+
+  [fullName, email, phone, message].forEach((input) => {
+    input.addEventListener("input", () => {
+      validateInput(input);
+    });
+
+    input.addEventListener("blur", () => {
+      validateInput(input);
+    });
+  });
+
+  privacy.addEventListener("change", validatePrivacy);
+
+  contactForm.addEventListener("submit", (event) => {
+    let isValid = true;
+
+    if (botField && botField.value.trim() !== "") {
+      event.preventDefault();
+      return;
+    }
+
+    [fullName, email, phone, message].forEach((input) => {
+      if (!validateInput(input)) {
+        isValid = false;
+      }
+    });
+
+    if (!validatePrivacy()) {
+      isValid = false;
+    }
+
+    if (!isValid) {
+      event.preventDefault();
+      return;
+    }
+
+    alert(
+      "Your message has been received. I’ll get back to you as soon as possible.",
+    );
+  });
+}
