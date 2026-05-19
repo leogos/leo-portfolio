@@ -250,3 +250,48 @@ if (contactForm) {
     );
   });
 }
+
+/* SCROLL TO TOP PROGRESS */
+const scrollTopButton = document.querySelector("[data-scroll-top]");
+
+if (scrollTopButton) {
+  const hero = document.querySelector("#hero");
+
+  const updateScrollProgress = () => {
+    const scrollTop = window.scrollY;
+    const documentHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress =
+      documentHeight > 0 ? Math.min(scrollTop / documentHeight, 1) : 0;
+
+    const progressAngle = progress * 360;
+
+    scrollTopButton.style.setProperty(
+      "--scroll-progress",
+      `${progressAngle}deg`,
+    );
+
+    const showAfter = hero ? hero.offsetTop + hero.offsetHeight * 0.8 : 420;
+
+    if (scrollTop > showAfter) {
+      scrollTopButton.classList.add("is-visible");
+      scrollTopButton.removeAttribute("tabindex");
+    } else {
+      scrollTopButton.classList.remove("is-visible");
+      scrollTopButton.setAttribute("tabindex", "-1");
+    }
+  };
+
+  scrollTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  window.addEventListener("scroll", updateScrollProgress);
+  window.addEventListener("resize", updateScrollProgress);
+
+  updateScrollProgress();
+}
